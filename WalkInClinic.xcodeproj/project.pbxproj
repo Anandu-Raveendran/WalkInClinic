@@ -1,0 +1,543 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 51;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		3F3CC78A275F42C40085DF68 /* PatientsHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F3CC789275F42C40085DF68 /* PatientsHomeViewController.swift */; };
+		3F443C3427499B05008CC23B /* DataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F443C3327499B05008CC23B /* DataSource.swift */; };
+		3F82B21A274AB8A300BFFC4E /* ChangePasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F82B219274AB8A300BFFC4E /* ChangePasswordViewController.swift */; };
+		3F82B21C274AC22400BFFC4E /* PasswordResetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F82B21B274AC22400BFFC4E /* PasswordResetViewController.swift */; };
+		3FA633B4275DB93700EEF75C /* PatientRegistrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FA633B3275DB93700EEF75C /* PatientRegistrationViewController.swift */; };
+		3FE8FE2127583F03008C2151 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3FE8FE2027583F03008C2151 /* GoogleService-Info.plist */; };
+		3FE8FE23275858A7008C2151 /* DoctorRegistrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FE8FE22275858A7008C2151 /* DoctorRegistrationViewController.swift */; };
+		3FF415C4275DE382004165D5 /* DoctorStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3FF415C3275DE382004165D5 /* DoctorStoryboard.storyboard */; };
+		3FF415C6275DE4B5004165D5 /* DoctorHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FF415C5275DE4B4004165D5 /* DoctorHomeViewController.swift */; };
+		3FF415C8275DE612004165D5 /* PatientStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3FF415C7275DE612004165D5 /* PatientStoryboard.storyboard */; };
+		BDDA1655455BEC8B29E65BAB /* Pods_WalkInClinic.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1869CF9E5A0C5E342AF073CB /* Pods_WalkInClinic.framework */; };
+		F922C1D52727086700A39554 /* UserDataDao.swift in Sources */ = {isa = PBXBuildFile; fileRef = F922C1D42727086700A39554 /* UserDataDao.swift */; };
+		F92830E02724A5650034B682 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F92830DF2724A5650034B682 /* AppDelegate.swift */; };
+		F92830E22724A5650034B682 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F92830E12724A5650034B682 /* SceneDelegate.swift */; };
+		F92830E42724A5650034B682 /* LoginPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F92830E32724A5650034B682 /* LoginPageViewController.swift */; };
+		F92830E72724A5650034B682 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F92830E52724A5650034B682 /* Main.storyboard */; };
+		F92830EA2724A5650034B682 /* BusinessCard.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F92830E82724A5650034B682 /* BusinessCard.xcdatamodeld */; };
+		F92830EC2724A5670034B682 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F92830EB2724A5670034B682 /* Assets.xcassets */; };
+		F92830EF2724A5670034B682 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F92830ED2724A5670034B682 /* LaunchScreen.storyboard */; };
+		F938335C2724BA45009AA357 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F938335B2724BA45009AA357 /* RegisterViewController.swift */; };
+		F93833652724E8F8009AA357 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F93833642724E8F8009AA357 /* HomeViewController.swift */; };
+		F93833682724EAB7009AA357 /* AppManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F93833672724EAB7009AA357 /* AppManager.swift */; };
+		F938336B2724F135009AA357 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F938336A2724F135009AA357 /* SettingsViewController.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		01835C18B17E99AA96B90D8D /* Pods-BusinessCard.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BusinessCard.release.xcconfig"; path = "Target Support Files/Pods-BusinessCard/Pods-BusinessCard.release.xcconfig"; sourceTree = "<group>"; };
+		1869CF9E5A0C5E342AF073CB /* Pods_WalkInClinic.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WalkInClinic.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		338DD8E85D561E6ABA681DEB /* Pods-WalkInClinic.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WalkInClinic.debug.xcconfig"; path = "Target Support Files/Pods-WalkInClinic/Pods-WalkInClinic.debug.xcconfig"; sourceTree = "<group>"; };
+		3F3CC789275F42C40085DF68 /* PatientsHomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PatientsHomeViewController.swift; sourceTree = "<group>"; };
+		3F443C3327499B05008CC23B /* DataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataSource.swift; sourceTree = "<group>"; };
+		3F82B219274AB8A300BFFC4E /* ChangePasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangePasswordViewController.swift; sourceTree = "<group>"; };
+		3F82B21B274AC22400BFFC4E /* PasswordResetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordResetViewController.swift; sourceTree = "<group>"; };
+		3FA633B3275DB93700EEF75C /* PatientRegistrationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PatientRegistrationViewController.swift; sourceTree = "<group>"; };
+		3FE8FE2027583F03008C2151 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
+		3FE8FE22275858A7008C2151 /* DoctorRegistrationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoctorRegistrationViewController.swift; sourceTree = "<group>"; };
+		3FF415C3275DE382004165D5 /* DoctorStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = DoctorStoryboard.storyboard; sourceTree = "<group>"; };
+		3FF415C5275DE4B4004165D5 /* DoctorHomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoctorHomeViewController.swift; sourceTree = "<group>"; };
+		3FF415C7275DE612004165D5 /* PatientStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = PatientStoryboard.storyboard; sourceTree = "<group>"; };
+		936225EE7B66E718279437F6 /* Pods-WalkInClinic.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WalkInClinic.release.xcconfig"; path = "Target Support Files/Pods-WalkInClinic/Pods-WalkInClinic.release.xcconfig"; sourceTree = "<group>"; };
+		BFFF18734AA1278C35B687CB /* Pods-BusinessCard.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BusinessCard.debug.xcconfig"; path = "Target Support Files/Pods-BusinessCard/Pods-BusinessCard.debug.xcconfig"; sourceTree = "<group>"; };
+		F922C1D42727086700A39554 /* UserDataDao.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDataDao.swift; sourceTree = "<group>"; };
+		F92830DC2724A5650034B682 /* WalkInClinic.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WalkInClinic.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F92830DF2724A5650034B682 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		F92830E12724A5650034B682 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		F92830E32724A5650034B682 /* LoginPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPageViewController.swift; sourceTree = "<group>"; };
+		F92830E62724A5650034B682 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		F92830E92724A5650034B682 /* BusinessCard.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = BusinessCard.xcdatamodel; sourceTree = "<group>"; };
+		F92830EB2724A5670034B682 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		F92830EE2724A5670034B682 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		F92830F02724A5670034B682 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F938335B2724BA45009AA357 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
+		F93833642724E8F8009AA357 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		F93833672724EAB7009AA357 /* AppManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppManager.swift; sourceTree = "<group>"; };
+		F938336A2724F135009AA357 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		F92830D92724A5650034B682 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BDDA1655455BEC8B29E65BAB /* Pods_WalkInClinic.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		3F3CC787275F42730085DF68 /* DoctorsViewController */ = {
+			isa = PBXGroup;
+			children = (
+				3FF415C5275DE4B4004165D5 /* DoctorHomeViewController.swift */,
+				3FE8FE22275858A7008C2151 /* DoctorRegistrationViewController.swift */,
+			);
+			path = DoctorsViewController;
+			sourceTree = "<group>";
+		};
+		3F3CC788275F42960085DF68 /* PatientsViewController */ = {
+			isa = PBXGroup;
+			children = (
+				3FA633B3275DB93700EEF75C /* PatientRegistrationViewController.swift */,
+				3F3CC789275F42C40085DF68 /* PatientsHomeViewController.swift */,
+			);
+			path = PatientsViewController;
+			sourceTree = "<group>";
+		};
+		3F443C3027499412008CC23B /* Swift Files */ = {
+			isa = PBXGroup;
+			children = (
+				F93833672724EAB7009AA357 /* AppManager.swift */,
+				F922C1D42727086700A39554 /* UserDataDao.swift */,
+				3F443C3327499B05008CC23B /* DataSource.swift */,
+			);
+			path = "Swift Files";
+			sourceTree = "<group>";
+		};
+		3FF415C2275DE362004165D5 /* StoryBoards */ = {
+			isa = PBXGroup;
+			children = (
+				F92830E52724A5650034B682 /* Main.storyboard */,
+				3FF415C3275DE382004165D5 /* DoctorStoryboard.storyboard */,
+				3FF415C7275DE612004165D5 /* PatientStoryboard.storyboard */,
+			);
+			path = StoryBoards;
+			sourceTree = "<group>";
+		};
+		5D9E39ACAD820DD99146A14C /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				BFFF18734AA1278C35B687CB /* Pods-BusinessCard.debug.xcconfig */,
+				01835C18B17E99AA96B90D8D /* Pods-BusinessCard.release.xcconfig */,
+				338DD8E85D561E6ABA681DEB /* Pods-WalkInClinic.debug.xcconfig */,
+				936225EE7B66E718279437F6 /* Pods-WalkInClinic.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		7C6994DF12FE1FF6A6EAC840 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1869CF9E5A0C5E342AF073CB /* Pods_WalkInClinic.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F92830D32724A5650034B682 = {
+			isa = PBXGroup;
+			children = (
+				F92830DE2724A5650034B682 /* WalkInClinic */,
+				F92830DD2724A5650034B682 /* Products */,
+				5D9E39ACAD820DD99146A14C /* Pods */,
+				7C6994DF12FE1FF6A6EAC840 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		F92830DD2724A5650034B682 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F92830DC2724A5650034B682 /* WalkInClinic.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F92830DE2724A5650034B682 /* WalkInClinic */ = {
+			isa = PBXGroup;
+			children = (
+				3FF415C2275DE362004165D5 /* StoryBoards */,
+				F92830DF2724A5650034B682 /* AppDelegate.swift */,
+				F92830E12724A5650034B682 /* SceneDelegate.swift */,
+				3F443C3027499412008CC23B /* Swift Files */,
+				F938335E2724BA6D009AA357 /* ViewControllers */,
+				3FE8FE2027583F03008C2151 /* GoogleService-Info.plist */,
+				F92830EB2724A5670034B682 /* Assets.xcassets */,
+				F92830ED2724A5670034B682 /* LaunchScreen.storyboard */,
+				F92830F02724A5670034B682 /* Info.plist */,
+				F92830E82724A5650034B682 /* BusinessCard.xcdatamodeld */,
+			);
+			path = WalkInClinic;
+			sourceTree = "<group>";
+		};
+		F938335E2724BA6D009AA357 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				3F3CC788275F42960085DF68 /* PatientsViewController */,
+				3F3CC787275F42730085DF68 /* DoctorsViewController */,
+				F92830E32724A5650034B682 /* LoginPageViewController.swift */,
+				F938335B2724BA45009AA357 /* RegisterViewController.swift */,
+				F93833642724E8F8009AA357 /* HomeViewController.swift */,
+				F938336A2724F135009AA357 /* SettingsViewController.swift */,
+				3F82B219274AB8A300BFFC4E /* ChangePasswordViewController.swift */,
+				3F82B21B274AC22400BFFC4E /* PasswordResetViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		F92830DB2724A5650034B682 /* WalkInClinic */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F92830F32724A5670034B682 /* Build configuration list for PBXNativeTarget "WalkInClinic" */;
+			buildPhases = (
+				96C840B3F18727A8150F3B23 /* [CP] Check Pods Manifest.lock */,
+				F92830D82724A5650034B682 /* Sources */,
+				F92830D92724A5650034B682 /* Frameworks */,
+				F92830DA2724A5650034B682 /* Resources */,
+				A1F9FC5C9E6F1BA35F540FBE /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = WalkInClinic;
+			productName = BusinessCard;
+			productReference = F92830DC2724A5650034B682 /* WalkInClinic.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		F92830D42724A5650034B682 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1210;
+				LastUpgradeCheck = 1210;
+				TargetAttributes = {
+					F92830DB2724A5650034B682 = {
+						CreatedOnToolsVersion = 12.1;
+						LastSwiftMigration = 1320;
+					};
+				};
+			};
+			buildConfigurationList = F92830D72724A5650034B682 /* Build configuration list for PBXProject "WalkInClinic" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = F92830D32724A5650034B682;
+			productRefGroup = F92830DD2724A5650034B682 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				F92830DB2724A5650034B682 /* WalkInClinic */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		F92830DA2724A5650034B682 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F92830EF2724A5670034B682 /* LaunchScreen.storyboard in Resources */,
+				3FF415C8275DE612004165D5 /* PatientStoryboard.storyboard in Resources */,
+				3FE8FE2127583F03008C2151 /* GoogleService-Info.plist in Resources */,
+				F92830EC2724A5670034B682 /* Assets.xcassets in Resources */,
+				3FF415C4275DE382004165D5 /* DoctorStoryboard.storyboard in Resources */,
+				F92830E72724A5650034B682 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		96C840B3F18727A8150F3B23 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-WalkInClinic-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A1F9FC5C9E6F1BA35F540FBE /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-WalkInClinic/Pods-WalkInClinic-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-WalkInClinic/Pods-WalkInClinic-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-WalkInClinic/Pods-WalkInClinic-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		F92830D82724A5650034B682 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F93833682724EAB7009AA357 /* AppManager.swift in Sources */,
+				F92830E42724A5650034B682 /* LoginPageViewController.swift in Sources */,
+				F938335C2724BA45009AA357 /* RegisterViewController.swift in Sources */,
+				3F443C3427499B05008CC23B /* DataSource.swift in Sources */,
+				F92830E02724A5650034B682 /* AppDelegate.swift in Sources */,
+				3FA633B4275DB93700EEF75C /* PatientRegistrationViewController.swift in Sources */,
+				3F3CC78A275F42C40085DF68 /* PatientsHomeViewController.swift in Sources */,
+				F922C1D52727086700A39554 /* UserDataDao.swift in Sources */,
+				F92830E22724A5650034B682 /* SceneDelegate.swift in Sources */,
+				3F82B21A274AB8A300BFFC4E /* ChangePasswordViewController.swift in Sources */,
+				3FE8FE23275858A7008C2151 /* DoctorRegistrationViewController.swift in Sources */,
+				F92830EA2724A5650034B682 /* BusinessCard.xcdatamodeld in Sources */,
+				3FF415C6275DE4B5004165D5 /* DoctorHomeViewController.swift in Sources */,
+				F93833652724E8F8009AA357 /* HomeViewController.swift in Sources */,
+				3F82B21C274AC22400BFFC4E /* PasswordResetViewController.swift in Sources */,
+				F938336B2724F135009AA357 /* SettingsViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		F92830E52724A5650034B682 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F92830E62724A5650034B682 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		F92830ED2724A5670034B682 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F92830EE2724A5670034B682 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		F92830F12724A5670034B682 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		F92830F22724A5670034B682 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		F92830F42724A5670034B682 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 338DD8E85D561E6ABA681DEB /* Pods-WalkInClinic.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = HAKMYR92U9;
+				INFOPLIST_FILE = WalkInClinic/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.anandu.apps.WalkInClinic;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		F92830F52724A5670034B682 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 936225EE7B66E718279437F6 /* Pods-WalkInClinic.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = HAKMYR92U9;
+				INFOPLIST_FILE = WalkInClinic/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.anandu.apps.WalkInClinic;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		F92830D72724A5650034B682 /* Build configuration list for PBXProject "WalkInClinic" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F92830F12724A5670034B682 /* Debug */,
+				F92830F22724A5670034B682 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F92830F32724A5670034B682 /* Build configuration list for PBXNativeTarget "WalkInClinic" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F92830F42724A5670034B682 /* Debug */,
+				F92830F52724A5670034B682 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		F92830E82724A5650034B682 /* BusinessCard.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				F92830E92724A5650034B682 /* BusinessCard.xcdatamodel */,
+			);
+			currentVersion = F92830E92724A5650034B682 /* BusinessCard.xcdatamodel */;
+			path = BusinessCard.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = F92830D42724A5650034B682 /* Project object */;
+}
