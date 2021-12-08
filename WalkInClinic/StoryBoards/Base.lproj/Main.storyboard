@@ -1396,9 +1396,21 @@
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rJZ-pV-m0l">
                                                 <rect key="frame" x="5" y="337" width="404" height="100"/>
+                                                <subviews>
+                                                    <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="R0E-8x-Eth">
+                                                        <rect key="frame" x="0.0" y="0.0" width="404" height="100"/>
+                                                        <connections>
+                                                            <action selector="datePickerChanged:" destination="2eK-j8-QDa" eventType="valueChanged" id="KrU-cr-J29"/>
+                                                        </connections>
+                                                    </datePicker>
+                                                </subviews>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="100" id="7h8-dy-DNL"/>
+                                                    <constraint firstAttribute="trailing" secondItem="R0E-8x-Eth" secondAttribute="trailing" id="Nce-hG-AgF"/>
+                                                    <constraint firstAttribute="bottom" secondItem="R0E-8x-Eth" secondAttribute="bottom" id="RUS-qv-4bO"/>
+                                                    <constraint firstItem="R0E-8x-Eth" firstAttribute="top" secondItem="rJZ-pV-m0l" secondAttribute="top" id="kyl-11-7Xh"/>
+                                                    <constraint firstItem="R0E-8x-Eth" firstAttribute="leading" secondItem="rJZ-pV-m0l" secondAttribute="leading" id="sQj-CY-0nS"/>
                                                 </constraints>
                                             </view>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Consultation for:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WoL-E4-SZe">
@@ -1556,6 +1568,7 @@
                         <outlet property="activeMedication" destination="Oys-X8-p0l" id="D2L-fV-84c"/>
                         <outlet property="consultation" destination="dIe-h8-wU5" id="811-VT-UCn"/>
                         <outlet property="consultationFor" destination="oEz-8k-42j" id="ZvV-M8-8WA"/>
+                        <outlet property="datePicker" destination="R0E-8x-Eth" id="Ayp-gb-ZTW"/>
                         <outlet property="dpimage" destination="xac-HN-sAf" id="oUA-uE-fz7"/>
                         <outlet property="healthCondition" destination="IfH-cv-qpR" id="8FK-CD-g9G"/>
                         <outlet property="location" destination="qJZ-6d-WIO" id="Anr-dc-HHE"/>

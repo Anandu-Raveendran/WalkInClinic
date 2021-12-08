@@ -10,6 +10,8 @@ import UIKit
 class NewAppointmentViewController: UIViewController {
 
     var selectedDoctor:DoctorDataDao? = nil
+    var date:String = ""
+    @IBOutlet weak var datePicker: UIDatePicker!
     
     @IBOutlet weak var dpimage: UIImageView!
     
@@ -27,23 +29,69 @@ class NewAppointmentViewController: UIViewController {
     
     @IBOutlet weak var activeMedication: UITextView!
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
+    
+    @IBAction func datePickerChanged(_ sender: UIDatePicker) {
+        let dateFormatter = DateFormatter()
 
-        // Do any additional setup after loading the view.
-    }
-    @IBAction func bookBtn(_ sender: Any) {
+           dateFormatter.dateStyle = DateFormatter.Style.short
+           dateFormatter.timeStyle = DateFormatter.Style.short
+
+           let strDate = dateFormatter.string(from: datePicker.date)
+           date = strDate
+        
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    override func viewDidLoad() {
+        super.viewDidLoad()
+       
+        datePickerChanged(datePicker)
+       
+        name.text = selectedDoctor?.name
+        specification.text = selectedDoctor?.specialisation
+        var str:String = ""
+        if(selectedDoctor?.days[0] ?? false ){
+            str += "Sun "
+        }
+        if(selectedDoctor?.days[1] ?? false){
+            str += "Mon "
+        }
+        if(selectedDoctor?.days[2] ?? false){
+            str += "Tue "
+        }
+        if(selectedDoctor?.days[3] ?? false){
+            str += "Wed "
+        }
+        if(selectedDoctor?.days[4] ?? false){
+            str += "Thu "
+        }
+        if(selectedDoctor?.days[5] ?? false){
+            str += "Fri "
+        }
+        if(selectedDoctor?.days[6] ?? false){
+            str += "Sat"
+        }
+        consultation.text = str
+        location.text = selectedDoctor?.clinicAdd
+        
     }
-    */
+    @IBAction func bookBtn(_ sender: Any) {
+        AppManager.shared.db.collection("appointment").document(selectedDoctor!.uid).setData([
+            "date": date,
+            "patient": AppManager.shared.loggedInUID,
+            "consultationFor": consultationFor.text,
+            "healthCondition": healthCondition.text,
+            "activemedication": activeMedication.text ])
+        {
+            error in
+            
+            if(error != nil){
+                print("appointment data create error \(String(describing: error?.localizedDescription))")
+            } else {
+                self.view.window?.rootViewController?.dismiss(animated: true, completion: nil)
+            }
+        }
+    }
 
+
+    
 }
