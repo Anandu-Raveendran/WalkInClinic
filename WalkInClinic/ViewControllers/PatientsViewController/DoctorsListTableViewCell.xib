@@ -25,26 +25,26 @@
                         </constraints>
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Dr John Simon" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="F7k-E5-MXA">
-                        <rect key="frame" x="120" y="51" width="180" height="18"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                        <rect key="frame" x="120" y="49.5" width="180" height="21.5"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Consultation:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7I1-Tw-vvg">
-                        <rect key="frame" x="10" y="115" width="53" height="10"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="8"/>
+                        <rect key="frame" x="10" y="115" width="70" height="13.5"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="11"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Location:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TZq-wU-OfX">
-                        <rect key="frame" x="10" y="128" width="36.5" height="10"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="8"/>
+                        <rect key="frame" x="10" y="131.5" width="48.5" height="13.5"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="11"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="M.B.B.S" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Int-W4-jvR">
-                        <rect key="frame" x="120" y="74" width="24" height="7.5"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="6"/>
+                        <rect key="frame" x="120" y="76" width="38" height="12"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="10"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
@@ -56,14 +56,14 @@
                         </buttonConfiguration>
                     </button>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YGa-Sj-Owc">
-                        <rect key="frame" x="56.5" y="128" width="22" height="10"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="8"/>
+                        <rect key="frame" x="68.5" y="131.5" width="28.5" height="13.5"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="11"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Thq-wu-Rd8">
-                        <rect key="frame" x="73" y="115" width="22" height="10"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="8"/>
+                        <rect key="frame" x="90" y="115" width="28.5" height="13.5"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="11"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
@@ -90,8 +90,11 @@
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
+                <outlet property="consultation" destination="Thq-wu-Rd8" id="MAT-y5-uhw"/>
                 <outlet property="dpimage" destination="7CS-hw-0uw" id="5rQ-5j-nRs"/>
+                <outlet property="location" destination="YGa-Sj-Owc" id="SHp-qB-1eK"/>
                 <outlet property="name" destination="F7k-E5-MXA" id="vgX-gO-5Xo"/>
+                <outlet property="specialisation" destination="Int-W4-jvR" id="jOA-N7-95H"/>
             </connections>
             <point key="canvasLocation" x="131.8840579710145" y="144.64285714285714"/>
         </tableViewCell>

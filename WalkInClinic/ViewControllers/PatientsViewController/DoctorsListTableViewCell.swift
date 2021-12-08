@@ -11,6 +11,13 @@ class DoctorsListTableViewCell: UITableViewCell {
 
     @IBOutlet weak var name: UILabel!
     @IBOutlet weak var dpimage: UIImageView!
+    
+    @IBOutlet weak var specialisation: UILabel!
+    
+    @IBOutlet weak var consultation: UILabel!
+    
+    @IBOutlet weak var location: UILabel!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
