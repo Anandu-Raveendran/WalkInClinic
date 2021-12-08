@@ -221,8 +221,9 @@ extension RegisterViewController :  UIImagePickerControllerDelegate, UINavigatio
                 return
             }
             
-           
+        
         })
+        
         uploadTask.observe(.failure) {(storageTaskSnapshot) in
             
             if let error = storageTaskSnapshot.error as NSError? {

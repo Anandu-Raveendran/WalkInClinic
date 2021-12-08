@@ -73,6 +73,10 @@
                                 <rect key="frame" x="224.5" y="821" width="169.5" height="31"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="Add New Appointment"/>
+                                <connections>
+                                    <action selector="addAppointmentBtn:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="DIp-an-s1d"/>
+                                    <segue destination="FHg-GB-wnJ" kind="show" id="Hkk-nl-2oR"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="8o3-4t-Vyo"/>
@@ -93,10 +97,63 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="2Lm-hd-9rj"/>
+                    <connections>
+                        <outlet property="appointmentTableView" destination="nkO-dy-E8O" id="ibf-IL-4nb"/>
+                        <outlet property="location" destination="smk-IH-33q" id="zxF-Zw-UIK"/>
+                        <outlet property="searchbar" destination="RNW-JL-eWB" id="78h-28-coX"/>
+                        <outlet property="settings" destination="Rav-7X-Jkj" id="5mn-wY-8Ty"/>
+                        <outlet property="userName" destination="1xv-oS-Mh0" id="hBa-g9-z36"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="908.69565217391312" y="49.553571428571423"/>
+        </scene>
+        <!--Doctors List View Controller-->
+        <scene sceneID="2rU-GJ-NYl">
+            <objects>
+                <viewController modalPresentationStyle="fullScreen" id="FHg-GB-wnJ" customClass="DoctorsListViewController" customModule="WalkInClinic" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Ae8-D8-8rg">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="Ghf-9l-Wra">
+                                <rect key="frame" x="0.0" y="88" width="414" height="51"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </searchBar>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Select the doctor for appointment" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cbZ-d5-S4b">
+                                <rect key="frame" x="20" y="149" width="257.5" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="127" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="cD1-uZ-MXU">
+                                <rect key="frame" x="0.0" y="178" width="414" height="682"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="O8Q-Mt-V5n"/>
+                        <color key="backgroundColor" systemColor="secondarySystemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Ghf-9l-Wra" firstAttribute="top" secondItem="O8Q-Mt-V5n" secondAttribute="top" id="2QG-AT-Enm"/>
+                            <constraint firstItem="cD1-uZ-MXU" firstAttribute="leading" secondItem="O8Q-Mt-V5n" secondAttribute="leading" id="BPG-ho-XUC"/>
+                            <constraint firstItem="cbZ-d5-S4b" firstAttribute="top" secondItem="Ghf-9l-Wra" secondAttribute="bottom" constant="10" id="BsN-AI-NO3"/>
+                            <constraint firstItem="Ghf-9l-Wra" firstAttribute="trailing" secondItem="O8Q-Mt-V5n" secondAttribute="trailing" id="KvL-Dn-gvy"/>
+                            <constraint firstItem="O8Q-Mt-V5n" firstAttribute="trailing" secondItem="cD1-uZ-MXU" secondAttribute="trailing" id="MOT-mg-xei"/>
+                            <constraint firstItem="cD1-uZ-MXU" firstAttribute="top" secondItem="cbZ-d5-S4b" secondAttribute="bottom" constant="10" id="Tcl-0n-kTv"/>
+                            <constraint firstItem="Ghf-9l-Wra" firstAttribute="leading" secondItem="O8Q-Mt-V5n" secondAttribute="leading" id="Ubw-uw-N9y"/>
+                            <constraint firstItem="cbZ-d5-S4b" firstAttribute="leading" secondItem="O8Q-Mt-V5n" secondAttribute="leading" constant="20" id="iSv-A2-DwJ"/>
+                            <constraint firstItem="O8Q-Mt-V5n" firstAttribute="bottom" secondItem="cD1-uZ-MXU" secondAttribute="bottom" id="kRN-Y5-K3O"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="Qba-Bo-8Zu"/>
+                    <connections>
+                        <outlet property="tableview" destination="cD1-uZ-MXU" id="pEx-xj-P9U"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="PvD-fO-gX8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1837.68115942029" y="49.553571428571423"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="4q0-py-exp">

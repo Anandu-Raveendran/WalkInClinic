@@ -7,8 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3F3A2B26275FB4D60023C94D /* PatientDataDao.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F3A2B25275FB4D60023C94D /* PatientDataDao.swift */; };
+		3F3A2B28275FB4E20023C94D /* DoctorDataDao.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F3A2B27275FB4E20023C94D /* DoctorDataDao.swift */; };
 		3F3CC78A275F42C40085DF68 /* PatientsHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F3CC789275F42C40085DF68 /* PatientsHomeViewController.swift */; };
 		3F443C3427499B05008CC23B /* DataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F443C3327499B05008CC23B /* DataSource.swift */; };
+		3F53D1A62760794D00F7DE0A /* DoctorsListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F53D1A52760794D00F7DE0A /* DoctorsListViewController.swift */; };
+		3F53D1A9276079F400F7DE0A /* DoctorsListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F53D1A7276079F400F7DE0A /* DoctorsListTableViewCell.swift */; };
+		3F53D1AA276079F400F7DE0A /* DoctorsListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3F53D1A8276079F400F7DE0A /* DoctorsListTableViewCell.xib */; };
 		3F82B21A274AB8A300BFFC4E /* ChangePasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F82B219274AB8A300BFFC4E /* ChangePasswordViewController.swift */; };
 		3F82B21C274AC22400BFFC4E /* PasswordResetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F82B21B274AC22400BFFC4E /* PasswordResetViewController.swift */; };
 		3FA633B4275DB93700EEF75C /* PatientRegistrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FA633B3275DB93700EEF75C /* PatientRegistrationViewController.swift */; };
@@ -36,8 +41,13 @@
 		01835C18B17E99AA96B90D8D /* Pods-BusinessCard.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BusinessCard.release.xcconfig"; path = "Target Support Files/Pods-BusinessCard/Pods-BusinessCard.release.xcconfig"; sourceTree = "<group>"; };
 		1869CF9E5A0C5E342AF073CB /* Pods_WalkInClinic.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WalkInClinic.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		338DD8E85D561E6ABA681DEB /* Pods-WalkInClinic.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WalkInClinic.debug.xcconfig"; path = "Target Support Files/Pods-WalkInClinic/Pods-WalkInClinic.debug.xcconfig"; sourceTree = "<group>"; };
+		3F3A2B25275FB4D60023C94D /* PatientDataDao.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PatientDataDao.swift; sourceTree = "<group>"; };
+		3F3A2B27275FB4E20023C94D /* DoctorDataDao.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoctorDataDao.swift; sourceTree = "<group>"; };
 		3F3CC789275F42C40085DF68 /* PatientsHomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PatientsHomeViewController.swift; sourceTree = "<group>"; };
 		3F443C3327499B05008CC23B /* DataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataSource.swift; sourceTree = "<group>"; };
+		3F53D1A52760794D00F7DE0A /* DoctorsListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoctorsListViewController.swift; sourceTree = "<group>"; };
+		3F53D1A7276079F400F7DE0A /* DoctorsListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoctorsListTableViewCell.swift; sourceTree = "<group>"; };
+		3F53D1A8276079F400F7DE0A /* DoctorsListTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DoctorsListTableViewCell.xib; sourceTree = "<group>"; };
 		3F82B219274AB8A300BFFC4E /* ChangePasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangePasswordViewController.swift; sourceTree = "<group>"; };
 		3F82B21B274AC22400BFFC4E /* PasswordResetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordResetViewController.swift; sourceTree = "<group>"; };
 		3FA633B3275DB93700EEF75C /* PatientRegistrationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PatientRegistrationViewController.swift; sourceTree = "<group>"; };
@@ -90,6 +100,9 @@
 			children = (
 				3FA633B3275DB93700EEF75C /* PatientRegistrationViewController.swift */,
 				3F3CC789275F42C40085DF68 /* PatientsHomeViewController.swift */,
+				3F53D1A52760794D00F7DE0A /* DoctorsListViewController.swift */,
+				3F53D1A7276079F400F7DE0A /* DoctorsListTableViewCell.swift */,
+				3F53D1A8276079F400F7DE0A /* DoctorsListTableViewCell.xib */,
 			);
 			path = PatientsViewController;
 			sourceTree = "<group>";
@@ -100,6 +113,8 @@
 				F93833672724EAB7009AA357 /* AppManager.swift */,
 				F922C1D42727086700A39554 /* UserDataDao.swift */,
 				3F443C3327499B05008CC23B /* DataSource.swift */,
+				3F3A2B25275FB4D60023C94D /* PatientDataDao.swift */,
+				3F3A2B27275FB4E20023C94D /* DoctorDataDao.swift */,
 			);
 			path = "Swift Files";
 			sourceTree = "<group>";
@@ -244,6 +259,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F92830EF2724A5670034B682 /* LaunchScreen.storyboard in Resources */,
+				3F53D1AA276079F400F7DE0A /* DoctorsListTableViewCell.xib in Resources */,
 				3FF415C8275DE612004165D5 /* PatientStoryboard.storyboard in Resources */,
 				3FE8FE2127583F03008C2151 /* GoogleService-Info.plist in Resources */,
 				F92830EC2724A5670034B682 /* Assets.xcassets in Resources */,
@@ -306,8 +322,11 @@
 				F938335C2724BA45009AA357 /* RegisterViewController.swift in Sources */,
 				3F443C3427499B05008CC23B /* DataSource.swift in Sources */,
 				F92830E02724A5650034B682 /* AppDelegate.swift in Sources */,
+				3F53D1A62760794D00F7DE0A /* DoctorsListViewController.swift in Sources */,
+				3F53D1A9276079F400F7DE0A /* DoctorsListTableViewCell.swift in Sources */,
 				3FA633B4275DB93700EEF75C /* PatientRegistrationViewController.swift in Sources */,
 				3F3CC78A275F42C40085DF68 /* PatientsHomeViewController.swift in Sources */,
+				3F3A2B26275FB4D60023C94D /* PatientDataDao.swift in Sources */,
 				F922C1D52727086700A39554 /* UserDataDao.swift in Sources */,
 				F92830E22724A5650034B682 /* SceneDelegate.swift in Sources */,
 				3F82B21A274AB8A300BFFC4E /* ChangePasswordViewController.swift in Sources */,
@@ -317,6 +336,7 @@
 				F93833652724E8F8009AA357 /* HomeViewController.swift in Sources */,
 				3F82B21C274AC22400BFFC4E /* PasswordResetViewController.swift in Sources */,
 				F938336B2724F135009AA357 /* SettingsViewController.swift in Sources */,
+				3F3A2B28275FB4E20023C94D /* DoctorDataDao.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

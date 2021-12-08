@@ -114,13 +114,21 @@ class DoctorRegistrationViewController: UIViewController {
         let passYear = passoutYearField.text
         let time = timeTextField.text
         
-        AppManager.shared.db.collection("Doctors").document(AppManager.shared.loggedInUID!).setData([
+        AppManager.shared.db.collection("users").document(AppManager.shared.loggedInUID!).setData([
             "clinicName":clinicName ?? "",
             "specialisation":specialisation ?? "",
             "clinicAdd":clinicAdd ?? "",
             "college":college ?? "",
             "passYear": passYear ?? "",
-            "consultationTime":time ?? "" ])
+            "consultationTime":time ?? "",
+            "sunday":   days[0],
+            "monday":   days[1],
+            "tuesday":  days[2],
+            "wednesday":days[3],
+            "thursday": days[4],
+            "friday":   days[5],
+            "saturday": days[6]
+        ])
         {
             error in
             
@@ -129,14 +137,11 @@ class DoctorRegistrationViewController: UIViewController {
             }
         }
         self.view.window?.rootViewController?.dismiss(animated: true, completion: nil)
-
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-   
-        
-            
+
     }
 
     /*
