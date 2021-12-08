@@ -114,7 +114,7 @@ class DoctorRegistrationViewController: UIViewController {
         let passYear = passoutYearField.text
         let time = timeTextField.text
         
-        AppManager.shared.db.collection("users").document(AppManager.shared.loggedInUID!).setData([
+        AppManager.shared.db.collection("users").document(AppManager.shared.loggedInUID!).updateData([
             "clinicName":clinicName ?? "",
             "specialisation":specialisation ?? "",
             "clinicAdd":clinicAdd ?? "",

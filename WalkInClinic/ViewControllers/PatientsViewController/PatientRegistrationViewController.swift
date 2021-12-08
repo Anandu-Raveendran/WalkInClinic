@@ -29,7 +29,7 @@ class PatientRegistrationViewController: UIViewController {
         let medicationDetails = medicationField.text
         let healthCondition = healthConditionField.text
         
-        AppManager.shared.db.collection("users").document(AppManager.shared.loggedInUID!).setData([
+        AppManager.shared.db.collection("users").document(AppManager.shared.loggedInUID!).updateData([
             "hcard":hcard ?? "",
             "dob":dob ?? "",
             "weight":weight ?? "",

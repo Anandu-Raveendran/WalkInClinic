@@ -19,9 +19,7 @@
 		3FA633B4275DB93700EEF75C /* PatientRegistrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FA633B3275DB93700EEF75C /* PatientRegistrationViewController.swift */; };
 		3FE8FE2127583F03008C2151 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3FE8FE2027583F03008C2151 /* GoogleService-Info.plist */; };
 		3FE8FE23275858A7008C2151 /* DoctorRegistrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FE8FE22275858A7008C2151 /* DoctorRegistrationViewController.swift */; };
-		3FF415C4275DE382004165D5 /* DoctorStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3FF415C3275DE382004165D5 /* DoctorStoryboard.storyboard */; };
 		3FF415C6275DE4B5004165D5 /* DoctorHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FF415C5275DE4B4004165D5 /* DoctorHomeViewController.swift */; };
-		3FF415C8275DE612004165D5 /* PatientStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3FF415C7275DE612004165D5 /* PatientStoryboard.storyboard */; };
 		BDDA1655455BEC8B29E65BAB /* Pods_WalkInClinic.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1869CF9E5A0C5E342AF073CB /* Pods_WalkInClinic.framework */; };
 		F922C1D52727086700A39554 /* UserDataDao.swift in Sources */ = {isa = PBXBuildFile; fileRef = F922C1D42727086700A39554 /* UserDataDao.swift */; };
 		F92830E02724A5650034B682 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F92830DF2724A5650034B682 /* AppDelegate.swift */; };
@@ -53,9 +51,7 @@
 		3FA633B3275DB93700EEF75C /* PatientRegistrationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PatientRegistrationViewController.swift; sourceTree = "<group>"; };
 		3FE8FE2027583F03008C2151 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		3FE8FE22275858A7008C2151 /* DoctorRegistrationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoctorRegistrationViewController.swift; sourceTree = "<group>"; };
-		3FF415C3275DE382004165D5 /* DoctorStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = DoctorStoryboard.storyboard; sourceTree = "<group>"; };
 		3FF415C5275DE4B4004165D5 /* DoctorHomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoctorHomeViewController.swift; sourceTree = "<group>"; };
-		3FF415C7275DE612004165D5 /* PatientStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = PatientStoryboard.storyboard; sourceTree = "<group>"; };
 		936225EE7B66E718279437F6 /* Pods-WalkInClinic.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WalkInClinic.release.xcconfig"; path = "Target Support Files/Pods-WalkInClinic/Pods-WalkInClinic.release.xcconfig"; sourceTree = "<group>"; };
 		BFFF18734AA1278C35B687CB /* Pods-BusinessCard.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BusinessCard.debug.xcconfig"; path = "Target Support Files/Pods-BusinessCard/Pods-BusinessCard.debug.xcconfig"; sourceTree = "<group>"; };
 		F922C1D42727086700A39554 /* UserDataDao.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDataDao.swift; sourceTree = "<group>"; };
@@ -123,8 +119,6 @@
 			isa = PBXGroup;
 			children = (
 				F92830E52724A5650034B682 /* Main.storyboard */,
-				3FF415C3275DE382004165D5 /* DoctorStoryboard.storyboard */,
-				3FF415C7275DE612004165D5 /* PatientStoryboard.storyboard */,
 			);
 			path = StoryBoards;
 			sourceTree = "<group>";
@@ -260,10 +254,8 @@
 			files = (
 				F92830EF2724A5670034B682 /* LaunchScreen.storyboard in Resources */,
 				3F53D1AA276079F400F7DE0A /* DoctorsListTableViewCell.xib in Resources */,
-				3FF415C8275DE612004165D5 /* PatientStoryboard.storyboard in Resources */,
 				3FE8FE2127583F03008C2151 /* GoogleService-Info.plist in Resources */,
 				F92830EC2724A5670034B682 /* Assets.xcassets in Resources */,
-				3FF415C4275DE382004165D5 /* DoctorStoryboard.storyboard in Resources */,
 				F92830E72724A5650034B682 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

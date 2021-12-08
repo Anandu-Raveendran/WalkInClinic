@@ -30,9 +30,9 @@ class RegisterViewController: UIViewController {
     
     @IBOutlet weak var phoneNumberField: UITextField!
     
-    @IBOutlet weak var jobTitleField: UITextField!
+    @IBOutlet weak var address: UITextField!
     
-    @IBOutlet weak var linkedInUrl: UITextField!
+    @IBOutlet weak var zipcode: UITextField!
     
     @IBAction func roleSelector(_ sender: UISegmentedControl) {
     
@@ -85,8 +85,8 @@ class RegisterViewController: UIViewController {
         
         let phone = Int(phoneNumberField.text?.trimmingCharacters(in: .whitespacesAndNewlines) ?? "0")
         
-        let linkedIn = linkedInUrl.text?.trimmingCharacters(in: .whitespacesAndNewlines) ?? ""
-        let jobTitle = jobTitleField.text ?? ""
+        let linkedIn = zipcode.text?.trimmingCharacters(in: .whitespacesAndNewlines) ?? ""
+        let jobTitle = address.text ?? ""
         
         if(errorMessage.isEmpty || errorMessage == "") {
             FirebaseAuth.Auth.auth().createUser(withEmail: email, password: pass, completion: {
