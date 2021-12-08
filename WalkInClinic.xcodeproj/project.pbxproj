@@ -18,6 +18,9 @@
 		3F82B21C274AC22400BFFC4E /* PasswordResetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F82B21B274AC22400BFFC4E /* PasswordResetViewController.swift */; };
 		3F82FDA327613FBD0060FF18 /* NewAppointmentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F82FDA227613FBD0060FF18 /* NewAppointmentViewController.swift */; };
 		3FA633B4275DB93700EEF75C /* PatientRegistrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FA633B3275DB93700EEF75C /* PatientRegistrationViewController.swift */; };
+		3FAA542F276160CF00AF6F15 /* AppointmentDao.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FAA542E276160CF00AF6F15 /* AppointmentDao.swift */; };
+		3FAA54362761676300AF6F15 /* AppointmentTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FAA54342761676300AF6F15 /* AppointmentTableViewCell.swift */; };
+		3FAA54372761676300AF6F15 /* AppointmentTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3FAA54352761676300AF6F15 /* AppointmentTableViewCell.xib */; };
 		3FE8FE2127583F03008C2151 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3FE8FE2027583F03008C2151 /* GoogleService-Info.plist */; };
 		3FE8FE23275858A7008C2151 /* DoctorRegistrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FE8FE22275858A7008C2151 /* DoctorRegistrationViewController.swift */; };
 		3FF415C6275DE4B5004165D5 /* DoctorHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FF415C5275DE4B4004165D5 /* DoctorHomeViewController.swift */; };
@@ -51,6 +54,9 @@
 		3F82B21B274AC22400BFFC4E /* PasswordResetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordResetViewController.swift; sourceTree = "<group>"; };
 		3F82FDA227613FBD0060FF18 /* NewAppointmentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewAppointmentViewController.swift; sourceTree = "<group>"; };
 		3FA633B3275DB93700EEF75C /* PatientRegistrationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PatientRegistrationViewController.swift; sourceTree = "<group>"; };
+		3FAA542E276160CF00AF6F15 /* AppointmentDao.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppointmentDao.swift; sourceTree = "<group>"; };
+		3FAA54342761676300AF6F15 /* AppointmentTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppointmentTableViewCell.swift; sourceTree = "<group>"; };
+		3FAA54352761676300AF6F15 /* AppointmentTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AppointmentTableViewCell.xib; sourceTree = "<group>"; };
 		3FE8FE2027583F03008C2151 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		3FE8FE22275858A7008C2151 /* DoctorRegistrationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoctorRegistrationViewController.swift; sourceTree = "<group>"; };
 		3FF415C5275DE4B4004165D5 /* DoctorHomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoctorHomeViewController.swift; sourceTree = "<group>"; };
@@ -102,6 +108,8 @@
 				3F53D1A7276079F400F7DE0A /* DoctorsListTableViewCell.swift */,
 				3F53D1A8276079F400F7DE0A /* DoctorsListTableViewCell.xib */,
 				3F82FDA227613FBD0060FF18 /* NewAppointmentViewController.swift */,
+				3FAA54342761676300AF6F15 /* AppointmentTableViewCell.swift */,
+				3FAA54352761676300AF6F15 /* AppointmentTableViewCell.xib */,
 			);
 			path = PatientsViewController;
 			sourceTree = "<group>";
@@ -114,6 +122,7 @@
 				3F443C3327499B05008CC23B /* DataSource.swift */,
 				3F3A2B25275FB4D60023C94D /* PatientDataDao.swift */,
 				3F3A2B27275FB4E20023C94D /* DoctorDataDao.swift */,
+				3FAA542E276160CF00AF6F15 /* AppointmentDao.swift */,
 			);
 			path = "Swift Files";
 			sourceTree = "<group>";
@@ -260,6 +269,7 @@
 				3FE8FE2127583F03008C2151 /* GoogleService-Info.plist in Resources */,
 				F92830EC2724A5670034B682 /* Assets.xcassets in Resources */,
 				F92830E72724A5650034B682 /* Main.storyboard in Resources */,
+				3FAA54372761676300AF6F15 /* AppointmentTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -314,10 +324,12 @@
 			files = (
 				F93833682724EAB7009AA357 /* AppManager.swift in Sources */,
 				F92830E42724A5650034B682 /* LoginPageViewController.swift in Sources */,
+				3FAA542F276160CF00AF6F15 /* AppointmentDao.swift in Sources */,
 				F938335C2724BA45009AA357 /* RegisterViewController.swift in Sources */,
 				3F443C3427499B05008CC23B /* DataSource.swift in Sources */,
 				F92830E02724A5650034B682 /* AppDelegate.swift in Sources */,
 				3F53D1A62760794D00F7DE0A /* DoctorsListViewController.swift in Sources */,
+				3FAA54362761676300AF6F15 /* AppointmentTableViewCell.swift in Sources */,
 				3F53D1A9276079F400F7DE0A /* DoctorsListTableViewCell.swift in Sources */,
 				3FA633B4275DB93700EEF75C /* PatientRegistrationViewController.swift in Sources */,
 				3F3CC78A275F42C40085DF68 /* PatientsHomeViewController.swift in Sources */,

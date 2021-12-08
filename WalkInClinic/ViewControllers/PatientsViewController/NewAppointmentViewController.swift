@@ -78,6 +78,9 @@ class NewAppointmentViewController: UIViewController {
         AppManager.shared.db.collection("appointment").document(selectedDoctor!.uid).setData([
             "date": date,
             "patient": AppManager.shared.loggedInUID,
+            "patientName": AppManager.shared.userData?.name,
+            "docName": selectedDoctor?.name,
+            "location": selectedDoctor?.clinicAdd,
             "consultationFor": consultationFor.text,
             "healthCondition": healthCondition.text,
             "activemedication": activeMedication.text ])

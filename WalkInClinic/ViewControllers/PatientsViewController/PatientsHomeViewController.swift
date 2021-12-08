@@ -6,6 +6,8 @@
 //
 
 import UIKit
+import Firebase
+import FirebaseFirestore
 
 class PatientsHomeViewController: UIViewController {
 
@@ -15,6 +17,7 @@ class PatientsHomeViewController: UIViewController {
     @IBOutlet weak var searchbar: UISearchBar!
     @IBOutlet weak var appointmentTableView: UITableView!
     
+    var appointmentList = [AppointmentDao]()
     var patientDetails:PatientDataDao? = nil
     
     override func viewWillAppear(_ animated: Bool) {
@@ -52,11 +55,54 @@ class PatientsHomeViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        appointmentTableView.delegate = self
+        appointmentTableView.dataSource = self
+        
+        let db = Firestore.firestore()
+        db.collection("appointment").getDocuments {
+            snapshot, error in
+            if error != nil{
+                print("Get documents returned error")
+                return
+            } else {
+                print("No error in getting doc list")
+            }
+            
+            if let snapshot = snapshot {
+                for d in snapshot.documents {
+                    print("in document list")
+                   
+                    self.appointmentList.append(AppointmentDao(id: d.documentID, activeMedication: d["activemedication"] as? String ?? "", consultationFor: d["consultationFor"] as? String ?? "", date: d["date"] as? String ?? "", healthCondition: d["healthCondition"] as? String ?? "", PatientID: d["patient"] as? String ?? "", docName: d["docName"] as? String ?? "", patientName: d["patientName"] as? String ?? "", location:d["location"] as? String ?? ""))
+                   
+                    self.appointmentTableView.reloadData()
+                    }
+                }
+            }
+        let nib = UINib(nibName: "AppointmentTableViewCell", bundle: nil)
+        appointmentTableView.register(nib, forCellReuseIdentifier: "appointmentCell")
+        }
         
     }
     
-    @IBAction func addAppointmentBtn(_ sender: UIButton) {
+
+
+extension PatientsHomeViewController:UITableViewDelegate, UITableViewDataSource{
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        appointmentList.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = appointmentTableView.dequeueReusableCell(withIdentifier: "appointmentCell", for: indexPath) as! AppointmentTableViewCell
+        
+        cell.title.text = appointmentList[indexPath.row].healthCondition
+        cell.doctor.text = appointmentList[indexPath.row].docName
+        cell.location.text = appointmentList[indexPath.row].location
+        cell.status.text = "Open"
+        cell.time.text = appointmentList[indexPath.row].date
+        return cell
         
     }
+    
+    
 }
