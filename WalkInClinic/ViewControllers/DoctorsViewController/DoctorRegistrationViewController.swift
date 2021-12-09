@@ -10,8 +10,7 @@ import UIKit
 class DoctorRegistrationViewController: UIViewController {
 
     var days:[Bool] = [false,false,false,false,false,false,false]
-    
-    @IBOutlet weak var dpImage: UIImageView!
+    var name:String? = nil
     @IBOutlet weak var docName: UILabel!
     @IBOutlet weak var specialisationField: UITextField!
     @IBOutlet weak var clinicNameField: UITextField!
@@ -141,7 +140,9 @@ class DoctorRegistrationViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        if let name = name {
+            docName.text = name
+        }
     }
 
     /*

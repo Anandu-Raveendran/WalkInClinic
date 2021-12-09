@@ -186,16 +186,10 @@ class RegisterViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if (segue.identifier == "doctorRegistration") {
             let dest = segue.destination as! DoctorRegistrationViewController
-            if(dpImageView.image != nil){
-                dest.dpImage.image = dpImageView.image
-            }
-            dest.docName.text = nameField.text
+            dest.name = nameField.text
         } else if (segue.identifier == "patientRegistration") {
             let dest = segue.destination as! PatientRegistrationViewController
-            if(dpImageView.image != nil){
-                dest.dpimage.image = dpImageView.image
-            }
-            dest.nameField.text = nameField.text
+            dest.name = nameField.text
         }
     }
 }

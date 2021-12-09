@@ -33,9 +33,9 @@ class HomeViewController: UIViewController {
             present(viewController, animated: false, completion: nil)
             performSegue(withIdentifier: "doctorHomeSegue", sender: self)
         } else if (contact.role == "patient") {
-            let viewController = storyBoard.instantiateViewController(identifier: "PatientsHomeViewController")
-            viewController.modalPresentationStyle = .fullScreen
-            present(viewController, animated: false, completion: nil)
+//            let viewController = storyBoard.instantiateViewController(identifier: "PatientsHomeViewController")
+//            viewController.modalPresentationStyle = .fullScreen
+//            present(viewController, animated: false, completion: nil)
             performSegue(withIdentifier: "patientHomeSegue", sender: self)
         } else {
             print("Role not identified")
@@ -43,6 +43,9 @@ class HomeViewController: UIViewController {
         }
     }
     
+    @IBAction func refresh(_ sender: Any) {
+        dataUpdateDone()
+    }
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if(segue.identifier == "toSettings"){
             let dest = segue.destination as! SettingsViewController

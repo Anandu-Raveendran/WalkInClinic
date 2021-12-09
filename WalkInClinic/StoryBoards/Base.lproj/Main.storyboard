@@ -192,8 +192,22 @@
                     <view key="view" contentMode="scaleToFill" id="Yo0-EF-myp">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="R5z-Ap-h5Z">
+                                <rect key="frame" x="157.5" y="432.5" width="99" height="31"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="arrow.clockwise.icloud.fill" catalog="system" title="Refresh"/>
+                                <connections>
+                                    <action selector="refresh:" destination="aXh-nq-Ojt" eventType="touchUpInside" id="rzE-Re-GGG"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Pi-WM-eiL"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="R5z-Ap-h5Z" firstAttribute="centerY" secondItem="Yo0-EF-myp" secondAttribute="centerY" id="KMM-1R-D02"/>
+                            <constraint firstItem="R5z-Ap-h5Z" firstAttribute="centerX" secondItem="Yo0-EF-myp" secondAttribute="centerX" id="jh9-Ac-JUD"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Home " id="BRd-5S-arw">
                         <barButtonItem key="rightBarButtonItem" title="Settings" image="etting" style="plain" id="Hlg-Xz-Az0">
@@ -605,13 +619,6 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6pQ-Mg-LRn">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="1200"/>
                                         <subviews>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="1xU-sf-sOY">
-                                                <rect key="frame" x="30" y="106.5" width="100" height="100"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="100" id="Fo2-hH-9vA"/>
-                                                    <constraint firstAttribute="width" constant="100" id="okI-Hn-m3z"/>
-                                                </constraints>
-                                            </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Doctors Details" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MSH-jP-Lay">
                                                 <rect key="frame" x="30" y="25" width="197" height="36"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
@@ -625,68 +632,68 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Doctor Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fql-qh-Bdk">
-                                                <rect key="frame" x="150" y="144.5" width="234" height="24"/>
+                                                <rect key="frame" x="30" y="136.5" width="354" height="24"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Specialisation" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="XSw-gF-I6Q">
-                                                <rect key="frame" x="30" y="216.5" width="354" height="34"/>
+                                                <rect key="frame" x="30" y="180.5" width="354" height="34"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Clinic Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Lem-eL-g91">
-                                                <rect key="frame" x="30" y="260.5" width="354" height="34"/>
+                                                <rect key="frame" x="30" y="224.5" width="354" height="34"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Clinic Address" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Z13-4e-xns">
-                                                <rect key="frame" x="30" y="304.5" width="354" height="34"/>
+                                                <rect key="frame" x="30" y="268.5" width="354" height="34"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Medical College Attended" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Tco-Oc-ihZ">
-                                                <rect key="frame" x="30" y="348.5" width="354" height="34"/>
+                                                <rect key="frame" x="30" y="312.5" width="354" height="34"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Pass out year" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vPX-5G-TTI">
-                                                <rect key="frame" x="30" y="392.5" width="354" height="34"/>
+                                                <rect key="frame" x="30" y="356.5" width="354" height="34"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Consultation Availability" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YyF-VA-ghs">
-                                                <rect key="frame" x="30" y="446.5" width="354" height="20.5"/>
+                                                <rect key="frame" x="30" y="410.5" width="354" height="20.5"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Please select the days you will be available to work." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9rn-Jd-yGK">
-                                                <rect key="frame" x="30" y="472" width="354" height="17"/>
+                                                <rect key="frame" x="30" y="436" width="354" height="17"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <color key="textColor" systemColor="secondaryLabelColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Average Consultation Time:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MRa-Jn-b4n">
-                                                <rect key="frame" x="30" y="601" width="354" height="20.5"/>
+                                                <rect key="frame" x="30" y="565" width="354" height="20.5"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Please select the days you will be available to work." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kXE-vB-RPn">
-                                                <rect key="frame" x="30" y="626.5" width="354" height="17"/>
+                                                <rect key="frame" x="30" y="590.5" width="354" height="17"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <color key="textColor" systemColor="secondaryLabelColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="This can be changed later." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jbd-pv-PQS">
-                                                <rect key="frame" x="30" y="494" width="354" height="17"/>
+                                                <rect key="frame" x="30" y="458" width="354" height="17"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <color key="textColor" systemColor="secondaryLabelColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <stackView opaque="NO" contentMode="scaleToFill" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="DcI-kC-h53">
-                                                <rect key="frame" x="30" y="521" width="344" height="60"/>
+                                                <rect key="frame" x="30" y="485" width="344" height="60"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GQo-zL-OND">
                                                         <rect key="frame" x="0.0" y="0.0" width="48.5" height="60"/>
@@ -847,7 +854,7 @@
                                                 </constraints>
                                             </stackView>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="hh:mm" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ItP-Gj-mHy">
-                                                <rect key="frame" x="304" y="594.5" width="70" height="34"/>
+                                                <rect key="frame" x="304" y="558.5" width="70" height="34"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="70" id="9hk-5Y-NcJ"/>
                                                 </constraints>
@@ -855,7 +862,7 @@
                                                 <textInputTraits key="textInputTraits" textContentType="date-time"/>
                                             </textField>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HMj-NC-1Et">
-                                                <rect key="frame" x="107" y="668.5" width="200" height="31"/>
+                                                <rect key="frame" x="107" y="632.5" width="200" height="31"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="200" id="WM9-qI-Jur"/>
                                                 </constraints>
@@ -869,13 +876,10 @@
                                         </subviews>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <constraints>
-                                            <constraint firstItem="XSw-gF-I6Q" firstAttribute="top" secondItem="1xU-sf-sOY" secondAttribute="bottom" constant="10" id="0qg-71-lhi"/>
                                             <constraint firstItem="9rn-Jd-yGK" firstAttribute="leading" secondItem="6pQ-Mg-LRn" secondAttribute="leading" constant="30" id="17i-XQ-v8F"/>
                                             <constraint firstItem="DcI-kC-h53" firstAttribute="top" secondItem="jbd-pv-PQS" secondAttribute="bottom" constant="10" id="17z-89-aq7"/>
-                                            <constraint firstItem="1xU-sf-sOY" firstAttribute="top" secondItem="GiM-hz-yrI" secondAttribute="bottom" constant="20" id="23Z-Wf-w9a"/>
                                             <constraint firstItem="HMj-NC-1Et" firstAttribute="top" secondItem="kXE-vB-RPn" secondAttribute="bottom" constant="25" id="3eU-L7-SSk"/>
                                             <constraint firstItem="ItP-Gj-mHy" firstAttribute="centerY" secondItem="MRa-Jn-b4n" secondAttribute="centerY" id="5xs-Z5-Xnm"/>
-                                            <constraint firstItem="1xU-sf-sOY" firstAttribute="leading" secondItem="6pQ-Mg-LRn" secondAttribute="leading" constant="30" id="6Ej-mK-8mm"/>
                                             <constraint firstAttribute="trailing" secondItem="XSw-gF-I6Q" secondAttribute="trailing" constant="30" id="7ui-WT-hcF"/>
                                             <constraint firstItem="vPX-5G-TTI" firstAttribute="top" secondItem="Tco-Oc-ihZ" secondAttribute="bottom" constant="10" id="9Yz-lV-30x"/>
                                             <constraint firstItem="Lem-eL-g91" firstAttribute="top" secondItem="XSw-gF-I6Q" secondAttribute="bottom" constant="10" id="Ayx-Rc-cUo"/>
@@ -887,6 +891,7 @@
                                             <constraint firstItem="YyF-VA-ghs" firstAttribute="leading" secondItem="6pQ-Mg-LRn" secondAttribute="leading" constant="30" id="J91-2C-yG2"/>
                                             <constraint firstAttribute="height" constant="1200" id="K6V-8H-hGb"/>
                                             <constraint firstItem="MSH-jP-Lay" firstAttribute="leading" secondItem="6pQ-Mg-LRn" secondAttribute="leading" constant="30" id="KWU-8H-Xy3"/>
+                                            <constraint firstItem="XSw-gF-I6Q" firstAttribute="top" secondItem="fql-qh-Bdk" secondAttribute="bottom" constant="20" id="Mc3-Fa-r3y"/>
                                             <constraint firstItem="HMj-NC-1Et" firstAttribute="centerX" secondItem="6pQ-Mg-LRn" secondAttribute="centerX" id="NyV-vV-IKy"/>
                                             <constraint firstItem="MRa-Jn-b4n" firstAttribute="leading" secondItem="6pQ-Mg-LRn" secondAttribute="leading" constant="30" id="PC1-wI-lGF"/>
                                             <constraint firstAttribute="trailing" secondItem="ItP-Gj-mHy" secondAttribute="trailing" constant="40" id="ROL-hE-64p"/>
@@ -897,10 +902,11 @@
                                             <constraint firstAttribute="trailing" secondItem="MRa-Jn-b4n" secondAttribute="trailing" constant="30" id="Yon-3g-FmC"/>
                                             <constraint firstAttribute="trailing" secondItem="Tco-Oc-ihZ" secondAttribute="trailing" constant="30" id="aZ9-qC-Y2n"/>
                                             <constraint firstItem="GiM-hz-yrI" firstAttribute="top" secondItem="MSH-jP-Lay" secondAttribute="bottom" constant="5" id="dWu-Zv-7WD"/>
+                                            <constraint firstItem="fql-qh-Bdk" firstAttribute="top" secondItem="GiM-hz-yrI" secondAttribute="bottom" constant="50" id="dr2-z8-yfM"/>
                                             <constraint firstItem="Z13-4e-xns" firstAttribute="top" secondItem="Lem-eL-g91" secondAttribute="bottom" constant="10" id="fB0-BA-lzW"/>
-                                            <constraint firstItem="fql-qh-Bdk" firstAttribute="centerY" secondItem="1xU-sf-sOY" secondAttribute="centerY" id="ftn-Fx-JQp"/>
                                             <constraint firstAttribute="trailing" secondItem="fql-qh-Bdk" secondAttribute="trailing" constant="30" id="him-Yv-XG3"/>
                                             <constraint firstItem="kXE-vB-RPn" firstAttribute="top" secondItem="MRa-Jn-b4n" secondAttribute="bottom" constant="5" id="iKu-g3-9o7"/>
+                                            <constraint firstItem="fql-qh-Bdk" firstAttribute="leading" secondItem="6pQ-Mg-LRn" secondAttribute="leading" constant="30" id="iyz-gb-RbW"/>
                                             <constraint firstAttribute="trailing" secondItem="YyF-VA-ghs" secondAttribute="trailing" constant="30" id="j1C-v4-1wj"/>
                                             <constraint firstItem="MSH-jP-Lay" firstAttribute="top" secondItem="6pQ-Mg-LRn" secondAttribute="top" constant="25" id="joR-Qk-URh"/>
                                             <constraint firstItem="DcI-kC-h53" firstAttribute="leading" secondItem="6pQ-Mg-LRn" secondAttribute="leading" constant="30" id="k61-D5-Bmz"/>
@@ -915,7 +921,6 @@
                                             <constraint firstItem="jbd-pv-PQS" firstAttribute="top" secondItem="9rn-Jd-yGK" secondAttribute="bottom" constant="5" id="tZO-cf-ECk"/>
                                             <constraint firstAttribute="trailing" secondItem="DcI-kC-h53" secondAttribute="trailing" constant="40" id="uG5-ba-FBF"/>
                                             <constraint firstItem="YyF-VA-ghs" firstAttribute="top" secondItem="vPX-5G-TTI" secondAttribute="bottom" constant="20" id="vYI-9C-neh"/>
-                                            <constraint firstItem="fql-qh-Bdk" firstAttribute="leading" secondItem="1xU-sf-sOY" secondAttribute="trailing" constant="20" id="w5r-UM-CMy"/>
                                         </constraints>
                                     </view>
                                 </subviews>
@@ -945,7 +950,6 @@
                         <outlet property="clinicNameField" destination="Lem-eL-g91" id="jge-XH-5QA"/>
                         <outlet property="collegeAttendedField" destination="Tco-Oc-ihZ" id="U32-TY-gza"/>
                         <outlet property="docName" destination="fql-qh-Bdk" id="6Dr-zf-j46"/>
-                        <outlet property="dpImage" destination="1xU-sf-sOY" id="oOV-UU-XWD"/>
                         <outlet property="passoutYearField" destination="vPX-5G-TTI" id="jdp-FY-89l"/>
                         <outlet property="specialisationField" destination="XSw-gF-I6Q" id="keq-ER-AZZ"/>
                         <outlet property="timeTextField" destination="ItP-Gj-mHy" id="scq-De-jfg"/>
@@ -969,13 +973,6 @@
                                     <view autoresizesSubviews="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lwl-CD-YVz" userLabel="Content View">
                                         <rect key="frame" x="0.0" y="0.0" width="400" height="1200"/>
                                         <subviews>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="eAn-mw-OHN">
-                                                <rect key="frame" x="30" y="106.5" width="100" height="100"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="100" id="Mq8-ml-FIU"/>
-                                                    <constraint firstAttribute="width" constant="100" id="sB4-oy-kBq"/>
-                                                </constraints>
-                                            </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Patients Details" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yny-wr-1ek">
                                                 <rect key="frame" x="30" y="25" width="199" height="36"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
@@ -988,51 +985,45 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Patients name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ijx-mG-DFS">
-                                                <rect key="frame" x="150" y="144.5" width="220" height="24"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                                <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Date of birth" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Yld-kO-taa">
-                                                <rect key="frame" x="30" y="216.5" width="340" height="34"/>
+                                                <rect key="frame" x="30" y="180.5" width="340" height="34"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits" textContentType="date-time"/>
                                             </textField>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Health Card number" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ya2-yR-Sdp">
-                                                <rect key="frame" x="30" y="260.5" width="340" height="34"/>
+                                                <rect key="frame" x="30" y="224.5" width="340" height="34"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Height" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5aW-0H-bZX">
-                                                <rect key="frame" x="30" y="304.5" width="340" height="34"/>
+                                                <rect key="frame" x="30" y="268.5" width="340" height="34"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Weight" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="QMJ-rE-kax">
-                                                <rect key="frame" x="30" y="348.5" width="340" height="34"/>
+                                                <rect key="frame" x="30" y="312.5" width="340" height="34"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Family Doctor" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="V9i-j9-Lfq">
-                                                <rect key="frame" x="30" y="392.5" width="340" height="34"/>
+                                                <rect key="frame" x="30" y="356.5" width="340" height="34"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Any existing health condition" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oBE-aK-6yH">
-                                                <rect key="frame" x="30" y="446.5" width="340" height="20.5"/>
+                                                <rect key="frame" x="30" y="410.5" width="340" height="20.5"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Active Medication" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f0Y-KZ-QGA">
-                                                <rect key="frame" x="30" y="592" width="340" height="20.5"/>
+                                                <rect key="frame" x="30" y="556" width="340" height="20.5"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="k1A-9b-jV4">
-                                                <rect key="frame" x="30" y="472" width="340" height="100"/>
+                                                <rect key="frame" x="30" y="436" width="340" height="100"/>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="100" id="v1k-xY-rOe"/>
@@ -1042,7 +1033,7 @@
                                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                             </textView>
                                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="tt4-gZ-YW3">
-                                                <rect key="frame" x="30" y="617.5" width="340" height="100"/>
+                                                <rect key="frame" x="30" y="581.5" width="340" height="100"/>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="100" id="ult-Ma-pTa"/>
@@ -1052,7 +1043,7 @@
                                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                             </textView>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="q2p-rw-Cu4">
-                                                <rect key="frame" x="40" y="747.5" width="320" height="31"/>
+                                                <rect key="frame" x="40" y="711.5" width="320" height="31"/>
                                                 <color key="tintColor" systemColor="systemGreenColor"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="filled" title="Submit"/>
@@ -1060,15 +1051,18 @@
                                                     <action selector="submitBtn:" destination="1E8-MP-XW3" eventType="touchUpInside" id="ydL-jP-3f0"/>
                                                 </connections>
                                             </button>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Patients name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ijx-mG-DFS">
+                                                <rect key="frame" x="30" y="136.5" width="340" height="24"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
                                         </subviews>
                                         <color key="backgroundColor" systemColor="secondarySystemBackgroundColor"/>
                                         <constraints>
-                                            <constraint firstItem="eAn-mw-OHN" firstAttribute="top" secondItem="ycW-Co-nb9" secondAttribute="bottom" constant="20" id="0Jy-2b-nOG"/>
                                             <constraint firstItem="k1A-9b-jV4" firstAttribute="top" secondItem="oBE-aK-6yH" secondAttribute="bottom" constant="5" id="22w-0n-c6R"/>
                                             <constraint firstItem="tt4-gZ-YW3" firstAttribute="leading" secondItem="lwl-CD-YVz" secondAttribute="leading" constant="30" id="2nv-Oj-YDN"/>
-                                            <constraint firstItem="eAn-mw-OHN" firstAttribute="leading" secondItem="lwl-CD-YVz" secondAttribute="leading" constant="30" id="3ns-gL-F2U"/>
                                             <constraint firstAttribute="height" constant="1200" id="4pr-Um-5jA"/>
-                                            <constraint firstItem="Ijx-mG-DFS" firstAttribute="centerY" secondItem="eAn-mw-OHN" secondAttribute="centerY" id="AMK-9q-ZbJ"/>
                                             <constraint firstItem="f0Y-KZ-QGA" firstAttribute="top" secondItem="k1A-9b-jV4" secondAttribute="bottom" constant="20" id="AWq-6w-xYM"/>
                                             <constraint firstAttribute="trailing" secondItem="ya2-yR-Sdp" secondAttribute="trailing" constant="30" id="Az4-zL-klf"/>
                                             <constraint firstItem="5aW-0H-bZX" firstAttribute="top" secondItem="ya2-yR-Sdp" secondAttribute="bottom" constant="10" id="DRb-IN-9u9"/>
@@ -1076,9 +1070,8 @@
                                             <constraint firstItem="q2p-rw-Cu4" firstAttribute="centerX" secondItem="lwl-CD-YVz" secondAttribute="centerX" id="Eql-ba-hVh"/>
                                             <constraint firstAttribute="trailing" secondItem="QMJ-rE-kax" secondAttribute="trailing" constant="30" id="Fbu-3I-64o"/>
                                             <constraint firstAttribute="trailing" secondItem="f0Y-KZ-QGA" secondAttribute="trailing" constant="30" id="Fcl-a4-sr3"/>
-                                            <constraint firstItem="Ijx-mG-DFS" firstAttribute="leading" secondItem="eAn-mw-OHN" secondAttribute="trailing" constant="20" id="Fni-BF-k0r"/>
+                                            <constraint firstItem="Yld-kO-taa" firstAttribute="top" secondItem="Ijx-mG-DFS" secondAttribute="bottom" constant="20" id="G7k-Gy-bQA"/>
                                             <constraint firstItem="QMJ-rE-kax" firstAttribute="leading" secondItem="lwl-CD-YVz" secondAttribute="leading" constant="30" id="GZO-Cl-VHV"/>
-                                            <constraint firstItem="Yld-kO-taa" firstAttribute="top" secondItem="eAn-mw-OHN" secondAttribute="bottom" constant="10" id="HTF-UM-lsq"/>
                                             <constraint firstItem="ycW-Co-nb9" firstAttribute="top" secondItem="Yny-wr-1ek" secondAttribute="bottom" constant="5" id="JeK-kE-rjF"/>
                                             <constraint firstItem="V9i-j9-Lfq" firstAttribute="leading" secondItem="lwl-CD-YVz" secondAttribute="leading" constant="30" id="KVn-Mj-b3R"/>
                                             <constraint firstItem="ycW-Co-nb9" firstAttribute="leading" secondItem="lwl-CD-YVz" secondAttribute="leading" constant="30" id="LHE-i7-BCf"/>
@@ -1096,6 +1089,7 @@
                                             <constraint firstItem="Yny-wr-1ek" firstAttribute="top" secondItem="lwl-CD-YVz" secondAttribute="top" constant="25" id="mg6-dr-UEt"/>
                                             <constraint firstItem="ya2-yR-Sdp" firstAttribute="top" secondItem="Yld-kO-taa" secondAttribute="bottom" constant="10" id="nyS-IG-hDv"/>
                                             <constraint firstAttribute="trailing" secondItem="tt4-gZ-YW3" secondAttribute="trailing" constant="30" id="oVR-0N-a4k"/>
+                                            <constraint firstItem="Ijx-mG-DFS" firstAttribute="leading" secondItem="lwl-CD-YVz" secondAttribute="leading" constant="30" id="osO-sX-tXs"/>
                                             <constraint firstItem="tt4-gZ-YW3" firstAttribute="top" secondItem="f0Y-KZ-QGA" secondAttribute="bottom" constant="5" id="pEs-dE-D9B"/>
                                             <constraint firstItem="f0Y-KZ-QGA" firstAttribute="leading" secondItem="lwl-CD-YVz" secondAttribute="leading" constant="30" id="pJ5-1J-BqA"/>
                                             <constraint firstItem="f0Y-KZ-QGA" firstAttribute="leading" secondItem="lwl-CD-YVz" secondAttribute="leading" constant="30" id="qI4-bU-KLd"/>
@@ -1105,6 +1099,7 @@
                                             <constraint firstAttribute="trailing" secondItem="Yld-kO-taa" secondAttribute="trailing" constant="30" id="tpv-bg-hr7"/>
                                             <constraint firstItem="q2p-rw-Cu4" firstAttribute="top" secondItem="tt4-gZ-YW3" secondAttribute="bottom" constant="30" id="uBO-Fk-LaA"/>
                                             <constraint firstItem="ya2-yR-Sdp" firstAttribute="leading" secondItem="lwl-CD-YVz" secondAttribute="leading" constant="30" id="v0v-EO-xFF"/>
+                                            <constraint firstItem="Ijx-mG-DFS" firstAttribute="top" secondItem="ycW-Co-nb9" secondAttribute="bottom" constant="50" id="vae-Ie-Arr"/>
                                             <constraint firstItem="Yld-kO-taa" firstAttribute="leading" secondItem="lwl-CD-YVz" secondAttribute="leading" constant="30" id="vyg-I8-6XO"/>
                                         </constraints>
                                     </view>
@@ -1133,7 +1128,6 @@
                     <size key="freeformSize" width="414" height="1200"/>
                     <connections>
                         <outlet property="dobField" destination="Yld-kO-taa" id="4kJ-AA-qxE"/>
-                        <outlet property="dpimage" destination="eAn-mw-OHN" id="BnD-kj-jMP"/>
                         <outlet property="familyDocField" destination="V9i-j9-Lfq" id="IAD-KI-m55"/>
                         <outlet property="healthCardField" destination="ya2-yR-Sdp" id="so2-Em-9yQ"/>
                         <outlet property="healthConditionField" destination="k1A-9b-jV4" id="0h1-ij-yiJ"/>
@@ -1743,10 +1737,11 @@
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="Yqd-hM-Hzb"/>
-        <segue reference="hwL-GQ-Fx2"/>
+        <segue reference="3l8-Dr-kug"/>
         <segue reference="X7j-X9-bk8"/>
     </inferredMetricsTieBreakers>
     <resources>
+        <image name="arrow.clockwise.icloud.fill" catalog="system" width="128" height="88"/>
         <image name="etting" width="128" height="128"/>
         <image name="gearshape" catalog="system" width="128" height="121"/>
         <image name="gearshape.fill" catalog="system" width="128" height="121"/>

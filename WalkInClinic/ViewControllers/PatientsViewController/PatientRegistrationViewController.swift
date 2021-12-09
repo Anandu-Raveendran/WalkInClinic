@@ -17,7 +17,8 @@ class PatientRegistrationViewController: UIViewController {
     @IBOutlet weak var dobField: UITextField!
     @IBOutlet weak var healthCardField: UITextField!
     @IBOutlet weak var nameField: UILabel!
-    @IBOutlet weak var dpimage: UIImageView!
+
+    var name:String? = nil
     
     @IBAction func submitBtn(_ sender: Any) {
         
@@ -51,7 +52,8 @@ class PatientRegistrationViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        nameField.text = name
         // Do any additional setup after loading the view.
     }
     
