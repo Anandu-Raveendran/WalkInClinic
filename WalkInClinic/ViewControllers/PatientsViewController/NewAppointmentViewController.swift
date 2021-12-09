@@ -11,8 +11,14 @@ class NewAppointmentViewController: UIViewController {
 
     var selectedDoctor:DoctorDataDao? = nil
     var date:String = ""
+    var selectedAppointment:AppointmentDao? = nil
+    var isDoc = false
+    
     @IBOutlet weak var datePicker: UIDatePicker!
     
+    @IBOutlet weak var heading: UILabel!
+    @IBOutlet weak var subheading: UILabel!
+    @IBOutlet weak var bookBtn: UIButton!
     @IBOutlet weak var dpimage: UIImageView!
     
     @IBOutlet weak var name: UILabel!
@@ -41,13 +47,44 @@ class NewAppointmentViewController: UIViewController {
         
     }
     
+    @IBOutlet weak var deleteBtnref: UIButton!
+    @IBAction func DeleteBtnAction(_ sender: Any) {
+        if let id = selectedAppointment?.id {
+            AppManager.shared.db.collection("appointment").document(id).delete() {
+                err in
+                if err != nil {
+                print("Error removing data")
+            } else {
+                print("Deleted data")
+                self.view.window?.rootViewController?.dismiss(animated: true, completion: nil)
+            }
+            }
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
        
-        datePickerChanged(datePicker)
-       
+        isDoc = AppManager.shared.userData?.role == "doctor"
+        if(selectedAppointment != nil || isDoc){
+            heading.text = "Appointment Details"
+            subheading.text = "Details of your Appointment"
+            consultationFor.text = selectedAppointment?.consultationFor
+            healthCondition.text = selectedAppointment?.healthCondition
+            activeMedication.text = selectedAppointment?.activeMedication
+            if(isDoc){
+                bookBtn.titleLabel?.text = "Complete"
+            } else {
+                bookBtn.titleLabel?.text = "Update"
+            }
+            deleteBtnref.isHidden = false
+        } else {
+            deleteBtnref.isHidden = true
+            datePickerChanged(datePicker)
+        }
         name.text = selectedDoctor?.name
         specification.text = selectedDoctor?.specialisation
+        AppManager.shared.getImageFirebase(for_uid: selectedDoctor?.uid ?? "", callback: gotImageCallback )
         var str:String = ""
         if(selectedDoctor?.days[0] ?? false ){
             str += "Sun "
@@ -74,8 +111,21 @@ class NewAppointmentViewController: UIViewController {
         location.text = selectedDoctor?.clinicAdd
         
     }
+    
+    func gotImageCallback(imageData:Data?){
+        if let imageData = imageData {
+            self.dpimage.image = UIImage(data:imageData)
+            AppManager.shared.dpImage = UIImage(data:imageData)
+        }
+    }
+    
     @IBAction func bookBtn(_ sender: Any) {
-        AppManager.shared.db.collection("appointment").document(selectedDoctor!.uid).setData([
+    
+        var statusText = "Under doctors review"
+        if isDoc {
+            statusText = "Completed"
+        }
+        AppManager.shared.db.collection("appointment").document(UUID().uuidString).setData([
             "date": date,
             "patient": AppManager.shared.loggedInUID,
             "patientName": AppManager.shared.userData?.name,
@@ -83,7 +133,9 @@ class NewAppointmentViewController: UIViewController {
             "location": selectedDoctor?.clinicAdd,
             "consultationFor": consultationFor.text,
             "healthCondition": healthCondition.text,
-            "activemedication": activeMedication.text ])
+            "activemedication": activeMedication.text,
+            "docID":selectedDoctor!.uid,
+            "status":statusText])
         {
             error in
             

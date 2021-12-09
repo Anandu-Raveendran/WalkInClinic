@@ -9,8 +9,9 @@ import Foundation
 
 class AppointmentDao{
     
-    init(id: String, activeMedication: String, consultationFor: String, date: String, healthCondition: String, PatientID: String, docName: String, patientName: String, location: String) {
+    init(id: String, activeMedication: String, consultationFor: String, date: String, healthCondition: String, PatientID: String, docName: String, patientName: String, location: String, docID:String,status:String) {
         self.id = id
+        self.docID = docID
         self.activeMedication = activeMedication
         self.consultationFor = consultationFor
         self.date = date
@@ -19,6 +20,7 @@ class AppointmentDao{
         self.docName = docName
         self.patientName = patientName
         self.location = location
+        self.status = status
     }
     
       
@@ -26,6 +28,7 @@ class AppointmentDao{
     
     
     var id:String
+    var docID:String
     var activeMedication:String
     var consultationFor:String
     var date:String
@@ -34,6 +37,7 @@ class AppointmentDao{
     var docName:String
     var patientName:String
     var location:String
+    var status:String
     
     
 }

@@ -49,11 +49,7 @@ class LoginPageViewController: UIViewController {
     }
     
 
-    override func viewDidDisappear(_ animated: Bool) {
-        if(FirebaseAuth.Auth.auth().currentUser == nil) {
-            performSegue(withIdentifier: "guestSegue", sender: nil)
-        }
-    }
+   
     
     override func viewDidLoad() {
         super.viewDidLoad()

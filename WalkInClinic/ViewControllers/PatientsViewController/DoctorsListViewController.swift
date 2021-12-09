@@ -73,7 +73,6 @@ extension DoctorsListViewController: UITableViewDelegate, UITableViewDataSource 
         cell.name.text = doctorsList[indexPath.row].name
         cell.specialisation.text = doctorsList[indexPath.row].specialisation
         cell.location.text = doctorsList[indexPath.row].clinicAdd
-        
         var str:String = ""
         if(doctorsList[indexPath.row].days[0] ){
             str += "Sun "
@@ -98,6 +97,35 @@ extension DoctorsListViewController: UITableViewDelegate, UITableViewDataSource 
         }
     
         cell.consultation.text = str
+        
+        
+        //get image
+         let for_uid = doctorsList[indexPath.row].uid
+            let storage = Storage.storage().reference()
+        
+            print("getting url for images/\(String(describing: for_uid)).jpeg")
+        
+            let imageRef = storage.child("images/\(String(describing: for_uid)).jpeg")
+            imageRef.downloadURL(completion: { url, error in
+            
+                if error != nil {
+                    print("download error occured \(error.debugDescription)")
+                    return
+                }
+            
+                print("image url \(String(describing: url!.absoluteURL))")
+            
+            DispatchQueue.global().async {
+                if let data =  try? Data(contentsOf: url!.absoluteURL) {
+                    
+                    DispatchQueue.main.async {
+                        cell.dpimage.image = UIImage(data: data)
+                    }
+                } else {print("Data is null")}
+            }
+            
+        })
+        
         return cell
     }
     

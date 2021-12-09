@@ -25,13 +25,21 @@ class HomeViewController: UIViewController {
         
         AppManager.shared.userData = contact
         print("retrieved dict for \(contact.role) \(String(describing: AppManager.shared.userData?.name))")
-    
+        let storyBoard = UIStoryboard(name: "Main", bundle: nil)
+
         if (contact.role == "doctor") {
+            let viewController = storyBoard.instantiateViewController(identifier: "DoctorHomeViewController")
+            viewController.modalPresentationStyle = .fullScreen
+            present(viewController, animated: false, completion: nil)
             performSegue(withIdentifier: "doctorHomeSegue", sender: self)
         } else if (contact.role == "patient") {
+            let viewController = storyBoard.instantiateViewController(identifier: "PatientsHomeViewController")
+            viewController.modalPresentationStyle = .fullScreen
+            present(viewController, animated: false, completion: nil)
             performSegue(withIdentifier: "patientHomeSegue", sender: self)
         } else {
             print("Role not identified")
+            AppManager.shared.logout()
         }
     }
     

@@ -85,8 +85,8 @@ class RegisterViewController: UIViewController {
         
         let phone = Int(phoneNumberField.text?.trimmingCharacters(in: .whitespacesAndNewlines) ?? "0")
         
-        let linkedIn = zipcode.text?.trimmingCharacters(in: .whitespacesAndNewlines) ?? ""
-        let jobTitle = address.text ?? ""
+        let zipcode = zipcode.text?.trimmingCharacters(in: .whitespacesAndNewlines) ?? ""
+        let addr = address.text ?? ""
         
         if(errorMessage.isEmpty || errorMessage == "") {
             FirebaseAuth.Auth.auth().createUser(withEmail: email, password: pass, completion: {
@@ -108,9 +108,9 @@ class RegisterViewController: UIViewController {
                 
                 AppManager.shared.db.collection("users").document(result!.user.uid).setData([
                     "name":name, "phone":phone!,
-                    "linkedIn":linkedIn,
+                    "address":zipcode,
                     "role":self?.role.rawValue,
-                    "job_title": jobTitle,
+                    "zipcode": addr,
                     "email": email ])
                 {
                     error in
@@ -183,6 +183,21 @@ class RegisterViewController: UIViewController {
         self.hideKeyboardWhenTappedAround()
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if (segue.identifier == "doctorRegistration") {
+            let dest = segue.destination as! DoctorRegistrationViewController
+            if(dpImageView.image != nil){
+                dest.dpImage.image = dpImageView.image
+            }
+            dest.docName.text = nameField.text
+        } else if (segue.identifier == "patientRegistration") {
+            let dest = segue.destination as! PatientRegistrationViewController
+            if(dpImageView.image != nil){
+                dest.dpimage.image = dpImageView.image
+            }
+            dest.nameField.text = nameField.text
+        }
+    }
 }
 
 extension RegisterViewController :  UIImagePickerControllerDelegate, UINavigationControllerDelegate{

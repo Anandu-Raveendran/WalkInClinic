@@ -10,7 +10,7 @@ import UIKit
 class DoctorRegistrationViewController: UIViewController {
 
     var days:[Bool] = [false,false,false,false,false,false,false]
-
+    
     @IBOutlet weak var dpImage: UIImageView!
     @IBOutlet weak var docName: UILabel!
     @IBOutlet weak var specialisationField: UITextField!

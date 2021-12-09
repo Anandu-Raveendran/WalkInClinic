@@ -19,9 +19,8 @@ class SettingsViewController: UIViewController {
     @IBOutlet weak var dpImageView: UIImageView!
     @IBOutlet weak var emailIDTextField: UITextField!
     @IBOutlet weak var phoneNumberField: UITextField!
-    @IBOutlet weak var jobTitleField: UITextField!
-    @IBOutlet weak var linkedInUrl: UITextField!
-    @IBOutlet weak var companyUrlField: UITextField!
+    @IBOutlet weak var address: UITextField!
+    @IBOutlet weak var zipcode: UITextField!
     @IBOutlet weak var errorField: UILabel!
     @IBOutlet weak var nameField: UITextField!
     
@@ -47,9 +46,8 @@ class SettingsViewController: UIViewController {
         }
         
         let phone = Int(phoneNumberField.text?.trimmingCharacters(in: .whitespacesAndNewlines) ?? "0")
-        let linkedIn = linkedInUrl.text?.trimmingCharacters(in: .whitespacesAndNewlines) ?? ""
-        let company_website = companyUrlField.text?.trimmingCharacters(in: .whitespacesAndNewlines) ?? ""
-        let jobTitle = jobTitleField.text ?? ""
+        let zip = zipcode.text?.trimmingCharacters(in: .whitespacesAndNewlines) ?? ""
+        let addr = address.text ?? ""
         
         if(errorMessage.isEmpty || errorMessage == "") {
             
@@ -68,9 +66,8 @@ class SettingsViewController: UIViewController {
                 
             AppManager.shared.db.collection("users").document(AppManager.shared.loggedInUID!).setData([
                     "name":name, "phone":phone!,
-                    "linkedIn":linkedIn,
-                    "company_website":company_website,
-                    "job_title": jobTitle                ])
+                    "zipcode":zip,
+                    "address": addr                ])
                 {
                     error in
                     
@@ -107,10 +104,18 @@ class SettingsViewController: UIViewController {
         emailIDTextField.text = FirebaseAuth.Auth.auth().currentUser?.email
         nameField.text = AppManager.shared.userData?.name
         phoneNumberField.text = String(AppManager.shared.userData!.phone)
-     //   linkedInUrl.text = AppManager.shared.userData?.linkedIn
-     //   companyUrlField.text = AppManager.shared.userData?.company_website
-     //   jobTitleField.text = AppManager.shared.userData?.job_title
-        dpImageView.image = AppManager.shared.dpImage
+   
+        address.text = AppManager.shared.userData?.address
+        zipcode.text = AppManager.shared.userData?.zipcode
+        AppManager.shared.getImageFirebase(for_uid: AppManager.shared.loggedInUID ?? "", callback: gotImageCallback )
+
+    }
+    
+    func gotImageCallback(imageData:Data?){
+        if let imageData = imageData {
+            self.dpImageView.image = UIImage(data:imageData)
+            AppManager.shared.dpImage = UIImage(data:imageData)
+        }
     }
 }
 extension SettingsViewController {
