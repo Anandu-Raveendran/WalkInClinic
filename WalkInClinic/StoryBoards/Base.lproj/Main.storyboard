@@ -201,10 +201,15 @@
                                     <action selector="refresh:" destination="aXh-nq-Ojt" eventType="touchUpInside" id="rzE-Re-GGG"/>
                                 </connections>
                             </button>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="ENu-KV-f7T">
+                                <rect key="frame" x="188.5" y="329.5" width="37" height="37"/>
+                            </activityIndicatorView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Pi-WM-eiL"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="ENu-KV-f7T" firstAttribute="centerY" secondItem="Yo0-EF-myp" secondAttribute="centerY" constant="-100" id="8ic-vg-zGs"/>
+                            <constraint firstItem="ENu-KV-f7T" firstAttribute="centerX" secondItem="Yo0-EF-myp" secondAttribute="centerX" id="ILA-WG-Iiu"/>
                             <constraint firstItem="R5z-Ap-h5Z" firstAttribute="centerY" secondItem="Yo0-EF-myp" secondAttribute="centerY" id="KMM-1R-D02"/>
                             <constraint firstItem="R5z-Ap-h5Z" firstAttribute="centerX" secondItem="Yo0-EF-myp" secondAttribute="centerX" id="jh9-Ac-JUD"/>
                         </constraints>
@@ -227,6 +232,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="spinner" destination="ENu-KV-f7T" id="ZVc-uw-xhA"/>
                         <segue destination="dgb-W9-nad" kind="showDetail" identifier="patientHomeSegue" id="K32-h3-mam"/>
                         <segue destination="YaJ-vz-Rov" kind="showDetail" identifier="doctorHomeSegue" id="G7j-pZ-L0W"/>
                     </connections>
@@ -1172,7 +1178,7 @@
                                 <rect key="frame" x="0.0" y="88" width="414" height="51"/>
                                 <textInputTraits key="textInputTraits"/>
                             </searchBar>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="150" estimatedRowHeight="150" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="XVg-LL-srg">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="150" estimatedRowHeight="150" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="XVg-LL-srg">
                                 <rect key="frame" x="20" y="255" width="374" height="561"/>
                                 <color key="backgroundColor" systemColor="secondarySystemBackgroundColor"/>
                             </tableView>
@@ -1228,7 +1234,9 @@
                                 <rect key="frame" x="224.5" y="821" width="169.5" height="31"/>
                                 <color key="tintColor" systemColor="systemGreenColor"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="Add New Appointment"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Add New Appointment">
+                                    <color key="baseBackgroundColor" systemColor="systemGreenColor"/>
+                                </buttonConfiguration>
                                 <connections>
                                     <segue destination="X2M-Ph-l8N" kind="show" id="xNT-Qe-RV7"/>
                                 </connections>
@@ -1736,8 +1744,8 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="Yqd-hM-Hzb"/>
-        <segue reference="3l8-Dr-kug"/>
+        <segue reference="Mbb-gM-0qQ"/>
+        <segue reference="VyG-qm-OFP"/>
         <segue reference="X7j-X9-bk8"/>
     </inferredMetricsTieBreakers>
     <resources>

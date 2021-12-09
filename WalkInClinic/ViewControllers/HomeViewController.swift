@@ -11,6 +11,7 @@ import FirebaseStorage
 
 class HomeViewController: UIViewController {
     
+    @IBOutlet weak var spinner: UIActivityIndicatorView!
     override func viewWillAppear(_ animated: Bool) {
         AppManager.shared.checkLoggedIn(caller: self)
         print("Home view will Appear")
@@ -19,6 +20,9 @@ class HomeViewController: UIViewController {
             AppManager.shared.getUserDataFireBase(for: uid, callback: getUserDataCallback)
         }
         super.viewWillAppear(true)
+    }
+    override func viewDidLoad() {
+        spinner.startAnimating()
     }
         
     func getUserDataCallback(contact:UserDataDao){
